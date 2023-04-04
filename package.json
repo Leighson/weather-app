@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather application using the Open Weather API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leighson/weather-app.git"
+  },
+  "author": "Lee Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leighson/weather-app/issues"
+  },
+  "homepage": "https://github.com/Leighson/weather-app#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jquery": "^3.6.4"
+  }
+}
