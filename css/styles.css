@@ -1,19 +1,50 @@
 /* DEFAULT */
-
-
 body {
+    all: unset;
     background-color: #020030;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
     color: white;
-    font-family:'Futura', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    text-align: center;
 }
 
 
 /* QUERY WINDOW */
+form {
+    background-color: #585780;
+    border-radius: 1rem;
+    padding: 3rem 5rem;
+    box-shadow: 0 0 2rem #191919;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
 
+.form-control {
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
 
+.form-control::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+.radio-buttons {
+    padding: 1rem 0 2rem;
+}
 
 
 /* WEATHER APP */
