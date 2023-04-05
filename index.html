@@ -31,17 +31,22 @@
         <form action="/" method="post">
 
             <div class="city-field">
-                <input class="form-control" type="text" id="city" name="city" placeholder="Enter a city">
+                <input class="form-control" type="text" id="city" name="city" placeholder="Enter a city" required>
             </div>
 
             <div class="radio-buttons">
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="unitOptions" id="unitMetric" value="celsius" checked>
+                    <input class="form-check-input" type="radio" name="unit" id="radioStandard" value="standard" checked>
+                    <label class="form-check-label" for="metric">Kelvin</label>
+                </div>
+
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="unit" id="radioMetric" value="metric">
                     <label class="form-check-label" for="metric">Celsius</label>
                 </div>
 
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="unitOptions" id="unitImperial" value="fahrenheit">
+                    <input class="form-check-input" type="radio" name="unit" id="radioImperial" value="imperial">
                     <label class="form-check-label" for="imperial">Fahrenheit</label>
                 </div>
             </div>
