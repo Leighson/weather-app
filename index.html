@@ -31,28 +31,28 @@
         <form action="/" method="post">
 
             <div class="city-field">
-                <input class="form-control" type="text" id="city" name="city" placeholder="Enter a city" required>
+                <input class="form-control" type="text" id="city" name="city" placeholder="Please enter a city" required>
             </div>
 
-            <div class="radio-buttons">
+            <div class="radio">
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="unit" id="radioStandard" value="standard" checked>
-                    <label class="form-check-label" for="metric">Kelvin</label>
+                    <input class="btn-check" type="radio" name="unit" id="radioStandard" value="standard" checked>
+                    <label class="btn radio-btn" for="radioStandard">K</label>
                 </div>
 
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="unit" id="radioMetric" value="metric">
-                    <label class="form-check-label" for="metric">Celsius</label>
+                    <input class="btn-check" type="radio" name="unit" id="radioMetric" autocomplete="off" value="metric">
+                    <label class="btn radio-btn" for="radioMetric">C</label>
                 </div>
 
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="unit" id="radioImperial" value="imperial">
-                    <label class="form-check-label" for="imperial">Fahrenheit</label>
+                    <input class="btn-check" type="radio" name="unit" id="radioImperial" value="imperial">
+                    <label class="btn radio-btn" for="radioImperial">F</label>
                 </div>
             </div>
 
             <div class="center-form">
-                <button type="submit" class="btn btn-primary">Submit Location</submit>
+                <button type="submit" class="btn btn-dark">Submit Location</submit>
             </div>
         </form>
 

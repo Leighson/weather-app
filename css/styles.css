@@ -1,10 +1,10 @@
 /* DEFAULT */
 body {
     all: unset;
-    background-color: #020030;
-    color: white;
+    background-color: rgb(2,0,48);
+    /* background: linear-gradient(295deg, rgba(2,0,48,1) 0%, rgba(0,0,0,1) 100%); */
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -13,13 +13,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 main {
+    /* background-image: linear-gradient(295deg, rgba(2,0,48,1) 0%, rgba(37,32,143,1) 35%, rgba(0,0,0,1) 100%); */
     text-align: center;
 }
 
 
 /* QUERY WINDOW */
 form {
-    background-color: #585780;
+    background-color: rgb(242, 171, 143);
     border-radius: 1rem;
     padding: 3rem 5rem;
     box-shadow: 0 0 2rem #191919;
@@ -34,17 +35,40 @@ form {
 }
 
 .form-control {
+    color: rgb(34, 37, 41);
     background-color: rgba(0,0,0,0);
-    color: white;
+    border-color: rgba(0, 0, 0, 0.25);
+    text-align: center;
 }
 
 .form-control::placeholder {
-    color: rgb(150, 150, 150);
+    color: rgb(0, 0, 0, 0.25);
+    font-weight: 300;
+    text-align: center;
 }
 
-.radio-buttons {
-    margin-left: 1rem;
-    padding: 1rem 0 2rem;
+.form-control:focus {
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    /* box-shadow: inset 0 0 .25rem .01rem rgb(2,0,48); if you want to get fancy with it */
+}
+
+.radio {
+    margin-left: 1rem; /* compensate for the default 'margin-right: 1rem' applied to '.form-check-inline' radio buttons */
+    padding: 1rem 0;
+}
+
+.radio-btn {
+    color: rgba(0, 0, 0, 0.5);
+    --bs-btn-font-size: .8rem;
+    --bs-btn-active-bg: rgb(34, 37, 41);
+    --bs-btn-border-radius: 100%;
+}
+
+.btn-check:checked + .btn {
+    color: white;
+    --bs-btn-border-width: 0;
 }
 
 

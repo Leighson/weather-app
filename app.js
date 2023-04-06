@@ -59,10 +59,18 @@ app.post('/', (req, res) => {
             res.write(`<p>The temperature in ${city} is ${temp} ${unitSymbol}.</p>`);
             res.send();
         })
+
+        // if (response.statusCode === 200){
+        //     window.location.replace(__dirname + '/success.html')
+        // } else {
+        //     window.location.replace(__dirname + `/failure.html`)
+        // }
+
     });
 
 });
 
+// open server and listen...
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`)
 });
