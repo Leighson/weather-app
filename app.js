@@ -44,6 +44,11 @@ app.post('/', (req, res) => {
     // make HTTPS request to Open Weather API using user input and auth
     https.get(baseURL + `q=${city}&units=${unit}&appid=${appID}`, (response) => {
 
+        if (response.statusCode === 200){
+            res.sendFile(__dirname + '/success.html');
+        } else {
+            res.sendFile(__dirname + '/failure.html');
+        }
         // define response upon receipt of API data requested and parse as JSON
         // used Postman to preview data formatting as JSON
         response.on("data", (data) => {
@@ -55,16 +60,10 @@ app.post('/', (req, res) => {
             const iconURL = `https://openweathermap.org/img/wn/${iconID}@2x.png`;
 
             // send response based on API data and upon receipt of user's post request
-            res.write(`<h1>Description: <img src=${iconURL}> ${desc}.</h1>`);
-            res.write(`<p>The temperature in ${city} is ${temp} ${unitSymbol}.</p>`);
-            res.send();
+            // res.write(`<h1>Description: <img src=${iconURL}> ${desc}.</h1>`);
+            // res.write(`<p>The temperature in ${city} is ${temp} ${unitSymbol}.</p>`);
+            // res.send();
         })
-
-        // if (response.statusCode === 200){
-        //     window.location.replace(__dirname + '/success.html')
-        // } else {
-        //     window.location.replace(__dirname + `/failure.html`)
-        // }
 
     });
 
